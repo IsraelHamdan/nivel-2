@@ -1,0 +1,65 @@
+.body {
+  background-color: #5b0888;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "JetBrains Mono";
+}
+
+.ordenador {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.ordenador-dataInsert {
+  display: flex;
+  font-weight: bold;
+  font-size: 26px;
+  border: none;
+}
+
+.ordenador-dadaInsert_input {
+  width: 300px;
+  margin-left: 4px;
+}
+
+.ordenador-dadaInsert_btn,
+.order-select-btn {
+  background: rgba(113, 58, 190, 1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.8px);
+  -webkit-backdrop-filter: blur(10.8px);
+  border: 1px solid rgba(113, 58, 190, 0.45);
+  font-weight: bold;
+  margin-left: 6px;
+}
+
+.ordenador-dadaInsert_btn:hover {
+  background-color: #e5cff7;
+}
+
+.ordenador-dadaInsert_label {
+  font-size: 2rem;
+}
+
+.order-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.order-select-selection {
+  width: 300px;
+}
+
+.order-select_option {
+}
+
+.bonus {
+  color: #5b0888;
+  font-size: 24px;
+}
