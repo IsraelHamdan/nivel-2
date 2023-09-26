@@ -1,24 +1,49 @@
-@import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=Marck+Script&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Marck+Script&display=swap");
 :root {
-  --font-family-title: "Croissant One", "JetBrains Mono";
-  --font-family-body: "Marck Script", "JetBrains Mono";
+  --font-family-title: "Marck Script", "JetBrains Mono";
+  --font-family-Body: "Croissant One", "JetBrains Mono";
 }
 
-/* .receita {
+#receitas {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-} */
+  justify-self: center;
+}
+
+.receita {
+  width: calc(33.33% - 20px); /* Ajuste a largura conforme necessário */
+  max-height: 550px;
+  overflow-y: auto;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
 
 .receita-titulo {
-  text-align: center;
   font-family: var(--font-family-title);
+  font-weight: bold;
   font-size: 40px;
 }
 
-.receita-ingredientes {
-  display: flex;
-  flex-direction: column;
+.receita-ingredientes_title {
+  font-family: var(--font-family-Body);
+  font-size: 22px;
+}
+
+.receitas-ingredientes_body {
+  font-family: var(--font-family-Body);
+  font-size: 18px;
+}
+
+.receita-modo-titulo {
+  font-family: var(--font-family-Body);
+  font-size: 22px;
+}
+
+.receita-modo-list {
+  font-family: var(--font-family-Body);
+  font-size: 16px;
 }
