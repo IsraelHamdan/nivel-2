@@ -1,49 +1,106 @@
 @import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Marck+Script&display=swap");
+
 :root {
+  --cor-de-fundo: #f5f5dc;
+  --cor-titulo-principal: #ffb000;
+  --cor-sombras: #ffcf9d;
+  --cor-titulos-internos: #004225;
+  --cor-rodape: #004225;
   --font-family-title: "Marck Script", "JetBrains Mono";
-  --font-family-Body: "Croissant One", "JetBrains Mono";
+  --font-family-body: "Croissant One", "JetBrains Mono";
+}
+
+.body {
+  background-color: var(--cor-de-fundo);
 }
 
 #receitas {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-self: center;
+  justify-content: center; /* Alinha os cards verticalmente ao centro */
 }
 
 .receita {
-  width: calc(33.33% - 20px); /* Ajuste a largura conforme necessário */
+  width: calc(30% - 20px);
   max-height: 550px;
   overflow-y: auto;
   margin: 10px;
   padding: 10px;
   border: 1px solid #ccc;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px var(--cor-sombras);
   background-color: #fff;
+  display: flex;
+  align-items: baseline;
+  box-sizing: border-box; /* Inclui margens na largura total */
+  background-color: rgba(255, 255, 255, 0.15); /* Fundo com efeito de vidro */
+  backdrop-filter: blur(10px); /* Efeito de desfoque no fundo (vidro) */
+  border-radius: 10px; /* Cantos arredondados */
+  padding: 20px; /* Espaçamento interno */
+  transition: transform 0.3s ease-in-out; /* Efeito de transição */
+  display: inline-block; /* Impede que os cards quebrem ao centralizar */
+  vertical-align: top; /* Alinha os cards ao topo do contêiner */
 }
 
-.receita-titulo {
+.title {
+  font-family: var(--font-family-title);
+  font-weight: bold;
+  font-size: 80px;
+  text-align: center;
+  color: var(--cor-titulo-principal);
+}
+
+.rodape {
+  background-color: var(--cor-rodape);
+  color: var(--cor-titulo-principal);
+  font-family: var(--font-family-title);
+  font-size: 25px;
+  text-align: center;
+}
+
+.receita:hover {
+  transform: translateY(-10px);
+}
+
+.receita-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.receita-header_titulo {
   font-family: var(--font-family-title);
   font-weight: bold;
   font-size: 40px;
+  text-align: center;
+  color: var(--cor-titulos-internos);
 }
 
-.receita-ingredientes_title {
-  font-family: var(--font-family-Body);
-  font-size: 22px;
+.receita-header_img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border: none;
 }
 
-.receitas-ingredientes_body {
-  font-family: var(--font-family-Body);
-  font-size: 18px;
+.receitas-body_ingredientes-title {
+  font-family: var(--font-family-body);
+  font-size: 26px;
+  color: var(--cor-titulos-internos);
 }
 
-.receita-modo-titulo {
-  font-family: var(--font-family-Body);
-  font-size: 22px;
+.receitas-body_ingredientes-list {
+  font-family: var(--font-family-body);
+  font-size: 20px;
 }
 
-.receita-modo-list {
-  font-family: var(--font-family-Body);
-  font-size: 16px;
+.receitas-modos_titulo {
+  font-family: var(--font-family-body);
+  font-size: 26px;
+  color: var(--cor-titulos-internos);
+}
+
+.receitas-modos_list {
+  font-family: var(--font-family-body);
+  font-size: 20px;
 }

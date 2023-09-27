@@ -1,48 +1,46 @@
-fetch("./receitas.json")
-  .then((response) => response.json())
-  .then((data) => {
-    const receitas = data;
-    getList(receitas);
-  });
+"use strict";
 
-const getList = (receitas) => {
-  const getItems = document.getElementById("receitas");
-  const receitasHtml = Object.values(receitas)
-    .map((receita) => {
-      const receitaTitulo = receita.titulo;
-      const receitaIngredientes = receita.ingredientes;
-      const receitaImagem = receita.imagens || [];
-      console.log(
-        "🚀 ~ file: index.js:15 ~ .map ~ receitaImagem:",
-        receitaImagem
-      );
+const getReceitas = () => {
+  fetch("./receitas.json")
+    .then((res) => res.json())
+    .then((data) => {
+      const postReceitasHtml = data.map(postReceitas).join("");
+      const getItems = document.getElementById("receitas");
 
-      const ingredientesHtml = receitaIngredientes
-        .map((ingrediente) => {
-          return `<li class="receita-ingrediente">${ingrediente}</li>`;
-        })
-        .join("");
-
-      const modoDePreparo = receita.modo_de_preparo
-        .map((passo) => {
-          return `<li class="receita-passos">${passo}</li>`;
-        })
-        .join("join");
-
-      return `
-      <div class="card col-4 receita">
-        <h1 class="receita-titulo">${receitaTitulo}</h1>
-        <img src=${receitaImagem} class="receita-imagem" alt=${receitaTitulo}/>
-        <div class="receita-ingredientes">
-          <h3 class="receita-ingredientes_title>Modo de preparo</h3>
-          <ol class="receita-modo-list>${modoDePreparo}</ol>
-        </div>
-      </div>
-    `;
-    })
-    .join("");
-
-  getItems.innerHTML = receitasHtml;
+      getItems.innerHTML = postReceitasHtml;
+    });
 };
 
-getList(receitas);
+const postReceitas = (receita) => {
+  const { title, ingredientes, imagem, modo_de_preparo } = receita;
+
+  const ingredientesHtml = ingredientes
+    .map(
+      (ingrediente) =>
+        `<li class="receitas-body_ingredientes-items">${ingrediente}</li>`
+    )
+    .join("");
+
+  const modoHtml = modo_de_preparo
+    .map((passo) => `<li class = "receita-passos">${passo}</li>`)
+    .join("");
+
+  return `
+    <section class="card receita col-3 aling-center">
+      <div class="receita-header">
+        <h1 class="receita-header_titulo">${title}</>
+        <img class="receita-header_img" src=${imagem} alt=${title}/>
+      </div>
+      <div class="receita-body">
+        <h3 class="receitas-body_ingredientes-title">Ingredientes</h3>
+        <ul class="receitas-body_ingredientes-list">${ingredientesHtml}</ul>
+      </div>
+      <div class="receitas-modos">
+        <h3 class="receitas-modos_titulo">Modo De Preparo</h3>
+        <ol class="receitas-modos_list">${modoHtml}</ol>
+      </div>
+    </section>
+  `;
+};
+
+getReceitas();

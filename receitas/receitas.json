@@ -1,8 +1,7 @@
 [
   {
     "id": 1,
-    "titulo": "Arroz com Couve-Flor",
-    "imagem": "./assets/arroz.png",
+    "title": "Arroz com Couve-Flor",
     "ingredientes": [
       "1 xícara de arroz",
       "2 xícaras de água",
@@ -16,12 +15,12 @@
       "Em uma panela, leve 2 xícaras de água para ferver. Adicione o arroz, tempere com sal a gosto e cozinhe até que o arroz esteja macio e a água tenha sido absorvida, cerca de 15-20 minutos. Reserve.",
       "Em outra panela, aqueça o azeite de oliva e refogue o alho picado até dourar levemente. Adicione os floretes de couve-flor, tempere com sal e pimenta a gosto, e cozinhe até que fiquem macios e dourados.",
       "Misture o arroz cozido com a couve-flor refogada e sirva quente. Bom apetite!"
-    ]
+    ],
+    "imagem": "./assets/arroz.png"
   },
   {
     "id": 2,
-    "titulo": "Bolo de Café com Chocolate",
-    "imagem": "./assets/bolo.jpeg",
+    "title": "Bolo de Café com Chocolate",
     "ingredientes": [
       "2 xícaras de farinha de trigo",
       "1 xícara de açúcar",
@@ -42,12 +41,13 @@
       "Adicione o leite, o óleo vegetal, os ovos e o extrato de baunilha à mistura de ingredientes secos. Misture bem até obter uma massa homogênea.",
       "Misture a água fervente na massa até que esteja completamente incorporada. A massa será líquida, mas é normal.",
       "Despeje a massa na forma preparada e asse no forno pré-aquecido por 30-35 minutos, ou até que um palito inserido no centro do bolo saia limpo."
-    ]
+    ], 
+    "imagem": "./assets/bolo.jpeg"
+
   },
   {
     "id": 3,
-    "titulo": "Strogonoff Russo",
-    "imagem": "./assets/strogonoff.jpg",
+    "title": "Strogonoff Russo",
     "ingredientes": [
       "500g de carne de vaca (filé ou outra de sua escolha), cortada em tiras finas",
       "1 cebola grande, picada",
@@ -71,6 +71,87 @@
       "Adicione o creme de leite, o caldo de carne, a mostarda e o ketchup à mistura. Cozinhe por alguns minutos até que o molho esteja aquecido e a carne esteja bem cozida.",
       "Se desejar, adicione picles em conserva cortados em rodelas ao strogonoff para um toque de acidez.",
       "Sirva o strogonoff russo quente, acompanhado de arroz cozido. Bom apetite!"
-    ]
+    ], 
+    "imagem": "./assets/strogonoff.jpg"
+  }, 
+  {
+    "id": 4,
+    "title": "Sopa de Abóbora",
+    "ingredientes": [
+      "500g de abóbora descascada e cortada em cubos",
+      "1 cebola média picada",
+      "2 dentes de alho picados",
+      "2 colheres de sopa de azeite de oliva",
+      "1 litro de caldo de legumes",
+      "Sal e pimenta a gosto",
+      "1/2 colher de chá de noz-moscada ralada",
+      "1/2 xícara de creme de leite (opcional)",
+      "Sementes de abóbora torradas para decorar (opcional)"
+    ],
+    "modo_de_preparo": [
+      "Em uma panela grande, aqueça o azeite e refogue a cebola e o alho até ficarem dourados.",
+      "Adicione a abóbora cortada em cubos e refogue por mais alguns minutos.",
+      "Despeje o caldo de legumes na panela e tempere com sal, pimenta e noz-moscada.",
+      "Cozinhe em fogo médio até que a abóbora esteja macia.",
+      "Use um liquidificador ou um mixer de mão para bater a sopa até ficar homogênea.",
+      "Se desejar, adicione o creme de leite para dar um toque cremoso.",
+      "Sirva a sopa de abóbora quente, decorada com sementes de abóbora torradas, se desejar."
+    ],
+    "imagem": "./assets/sopa_de_abobora.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Salada de Quinoa com Legumes",
+    "ingredientes": [
+      "1 xícara de quinoa",
+      "2 xícaras de água",
+      "1 pepino grande, cortado em cubos",
+      "2 tomates médios, cortados em cubos",
+      "1 pimentão vermelho, cortado em tiras finas",
+      "1/2 cebola roxa, picada",
+      "Suco de 1 limão",
+      "2 colheres de sopa de azeite de oliva",
+      "Sal e pimenta a gosto",
+      "Folhas de hortelã fresca para decorar"
+    ],
+    "modo_de_preparo": [
+      "Lave bem a quinoa em água corrente.",
+      "Em uma panela, leve a quinoa e a água para ferver. Reduza o fogo, tampe e cozinhe por cerca de 15 minutos ou até que a quinoa esteja macia e a água tenha sido absorvida. Reserve e deixe esfriar.",
+      "Em uma tigela grande, misture a quinoa cozida, o pepino, os tomates, o pimentão e a cebola roxa.",
+      "Em um pequeno recipiente, prepare o molho misturando o suco de limão, o azeite de oliva, o sal e a pimenta.",
+      "Despeje o molho sobre a salada de quinoa e legumes e misture bem.",
+      "Decore com folhas de hortelã fresca antes de servir.",
+      "Sirva a salada de quinoa com legumes como prato principal ou acompanhamento."
+    ],
+    "imagem": "./assets/salada_de_quinoa.jpeg"
+  },
+  {
+    "id": 6,
+    "title": "Torta de Maçã",
+    "ingredientes": [
+      "3 maçãs, descascadas, sem sementes e cortadas em fatias finas",
+      "1 colher de chá de canela em pó",
+      "1/2 xícara de açúcar",
+      "1 xícara de farinha de trigo",
+      "1/2 xícara de açúcar mascavo",
+      "1/2 xícara de manteiga derretida",
+      "2 ovos",
+      "1 colher de chá de essência de baunilha",
+      "1/2 colher de chá de sal",
+      "1/2 colher de chá de fermento em pó",
+      "1/2 colher de chá de bicarbonato de sódio",
+      "1/2 xícara de leite",
+      "Creme de chantilly ou sorvete de baunilha para servir (opcional)"
+    ],
+    "modo_de_preparo": [
+      "Pré-aqueça o forno a 180°C. Unte e enfarinhe uma forma de torta.",
+      "Em uma tigela grande, misture as fatias de maçã com a canela e 1/2 xícara de açúcar. Reserve.",
+      "Em outra tigela, combine a farinha, o açúcar mascavo, a manteiga derretida, os ovos, a essência de baunilha, o sal, o fermento em pó e o bicarbonato de sódio. Misture bem.",
+      "Adicione o leite à mistura e mexa até obter uma massa homogênea.",
+      "Despeje metade da massa na forma preparada. Coloque as maçãs por cima e cubra com o restante da massa.",
+      "Asse no forno pré-aquecido por 45-50 minutos ou até que a torta esteja dourada e firme.",
+      "Deixe esfriar antes de servir. Sirva com creme de chantilly ou sorvete de baunilha, se desejar."
+    ],
+    "imagem": "./assets/torta_de_maca.jpeg"
   }
 ]
