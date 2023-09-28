@@ -1,0 +1,15 @@
+.nav {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 800px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border: none;
+  margin-top: 15 px;
+}

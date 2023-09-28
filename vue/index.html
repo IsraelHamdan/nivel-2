@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body class="body">
+  <h1 class="text-start m-3">Usuários de teste via REST</h1>
+  <h5 class="text-start m-3 subtitle">Os usuários deste exemplo são fornecidos pela API <a href="https://reqres.in/"
+      target="_blank">require.in</a></h5>
+  <main class=" container">
+    <div class="container-fluid" id="app">
+      <div class="row d-flex justify-content-center">
+        <div class="card cardGlass col-3 p-2 m-3 text-center" v-for="user in users">
+          <img id="user-img" :src="user.avatar" alt="" class="card-img-top">
+          <div class="card-body">
+            <h5 id="user-name" class="card-title cardGlass-title">{{ user.first_name }} {{ user.last_name }}</h5>
+            <p id="user-email" class="card-text cardGlass-text">{{ user.email }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+  <!-- Vue CDN -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <!-- Local script -->
+  <script src="./vue.js"></script>
+
+</body>
+
+</html>
