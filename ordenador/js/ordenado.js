@@ -41,7 +41,7 @@ const order = () => {
       case "quick":
         start = 0;
         end = numbers.length - 1;
-        quickSort([...numbers], start, end);
+        quickSort(numbers, start, end);
         break;
       default:
         console.log([...numbers]);
@@ -122,6 +122,7 @@ const partition = (numbers, start, end) => {
   }
 
   [numbers[i + 1], numbers[end]] = [numbers[end], numbers[i + 1]];
+  postListToUser(numbers);
   return i + 1;
 };
 
